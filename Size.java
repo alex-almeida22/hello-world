@@ -17,6 +17,7 @@ public enum Size
     private final int minValue;
     private final int maxValue;
     private final char code;
+    private int counter;
     
     private Size(int minValue, int maxValue,String description, char code)
     {
@@ -24,6 +25,7 @@ public enum Size
         this.minValue = minValue;
         this.maxValue = maxValue;
         this.code = code;
+        counter++;
     }
     
     @Override
@@ -50,5 +52,10 @@ public enum Size
     public char getCode()
     {
          return code;   
+    }
+    
+    public int getCounter()
+    {
+        return counter;
     }
 }
